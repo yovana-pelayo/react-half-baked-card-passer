@@ -6,15 +6,8 @@ import ExecutePassButton from './components/ExecutePassButton';
 import { useGameContext } from './context/GameContext';
 
 function App() {
-  const {
-    playerOneHand,
-    playerTwoHand,
-    playerThreeHand,
-    deck,
-    setSelectedCard,
-    setFrom,
-    selectedCard,
-  } = useGameContext();
+  const { playerOneHand, playerTwoHand, playerThreeHand, deck, setSelectedCard, selectedCard } =
+    useGameContext();
 
   return (
     <div className="App">
@@ -23,13 +16,7 @@ function App() {
         <Player player={1} hand={playerOneHand} setSelectedCard={setSelectedCard} />
         <Player player={2} hand={playerTwoHand} setSelectedCard={setSelectedCard} />
         <Player player={3} hand={playerThreeHand} setSelectedCard={setSelectedCard} />
-        <CardList
-          cards={deck}
-          selectedCard={selectedCard}
-          setSelectedCard={setSelectedCard}
-          setFrom={setFrom}
-          player={'deck'}
-        />
+        <CardList cards={deck} player={'deck'} />
       </section>
       <section>{selectedCard && <ExecutePassButton />}</section>
     </div>
