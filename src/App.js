@@ -10,14 +10,9 @@ function App() {
     playerOneHand,
     playerTwoHand,
     playerThreeHand,
-
-    to,
-
-    from,
     deck,
     setSelectedCard,
     setFrom,
-
     selectedCard,
   } = useGameContext();
 
