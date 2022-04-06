@@ -9,7 +9,7 @@ export default function Player({ player, hand }) {
       className={`player ${to === player ? 'selected-player' : ''}`}
       onClick={() => setTo(player)}
     >
-      <p>Player: {player}</p>
+      <p>Player {player}</p>
       <CardList player={player} cards={hand} />
     </div>
   );

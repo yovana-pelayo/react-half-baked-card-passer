@@ -37,7 +37,7 @@ const GameProvider = ({ children }) => {
 const useGameContext = () => {
   const context = useContext(GameContext);
   if (context === undefined) {
-    throw new Error('gamer must be within a gameProvider');
+    throw new Error('Gamer must be within a gameProvider');
   }
   return context;
 };
